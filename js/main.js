@@ -15,7 +15,7 @@ function Game(){
     this.updateTime = null;
     this.densityStep = null;
     this.balloonsArray = null;
-    this.maxBalloonsNumber = 4;
+    this.maxBalloonsNumber = 45;
     let thiz = this;
 
     this.updater = function(){
