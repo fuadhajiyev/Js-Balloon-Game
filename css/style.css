@@ -1,7 +1,11 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @import url('https://fonts.googleapis.com/css?family=Contrail+One');
 
 body {
     background: #47657e;
+    height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -52,7 +56,8 @@ body {
     text-shadow: 1px 1px 0 #A35906;
     border: 4px solid #fff;
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 #restart-btn {
@@ -72,3 +77,14 @@ body {
     z-index: 99;
 }
 
+@media only screen and (max-width: 600px) {
+    #main-wrapper {
+     
+        width: 100%;
+      
+    }
+
+    #canvas {
+        width: 100%;
+    }
+  }
