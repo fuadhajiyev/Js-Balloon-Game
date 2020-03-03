@@ -15,7 +15,7 @@ function Game(){
     this.updateTime = null;
     this.densityStep = null;
     this.balloonsArray = null;
-    this.maxBalloonsNumber = 30;
+    this.maxBalloonsNumber = 4;
     let thiz = this;
 
     this.updater = function(){
@@ -25,6 +25,7 @@ function Game(){
   }
 
   Game.prototype.startGame = function(){
+    go()
     this.playElement.style.display = "none";
     this.restartBtn.style.display = "none";
     
@@ -36,6 +37,11 @@ function Game(){
   };
 
   Game.prototype.updateScore = function(score){
+    if(score == this.maxBalloonsNumber * 150){
+        clearInterval(this.intervalId);
+        showRestartButton();
+        winnerCard();
+    }
     this.scoreElem.innerHTML = score;
   };
 
@@ -62,7 +68,7 @@ function Game(){
 
     for(let i = 0; i < this.balloonsArray.length; i++)
     {
-      this.balloonsArray[i].element.style.bottom = (parseInt(this.balloonsArray[i].element.style.bottom) + 3.3 + this.balloonsArray[i].getRandomSpeed())+'px';
+      this.balloonsArray[i].element.style.bottom = (parseInt(this.balloonsArray[i].element.style.bottom) + 3.8 + this.balloonsArray[i].getRandomSpeed())+'px';
     }
 
 
@@ -106,7 +112,7 @@ function Game(){
     constructor(x, y, points){
       this.positionX = x;
       this.positionY = y;
-      this.color = ['#d64161','#034f84','#ff7b25','green'];
+      this.color = ['#d64161','red','blue','green'];
       this.points = points;
 
       this.element = this.createElement();
@@ -144,6 +150,12 @@ function Game(){
       startGame.startGame();
     };
   });
+  
+  function go() {
+    let audio3 = document.getElementById("audio-3");
+    audio3.play();
+  }
+
 
 
   function playSound() {
@@ -157,10 +169,29 @@ function Game(){
 
     let restartGame = new Game();
     restartGame.initGame();
-    
+
     restart.onclick= function(){
+      let audio2 = document.getElementById("audio-2");
+      audio2.pause();
+      go()
+      let card = document.getElementById('card');
+      card.style.display="none";
       restartGame.startGame();
       restartGame.updateScore(0);
     }
   }
+  //winner game 
+  function winnerCard() { 
+      crowdCheer();
+    let card = document.getElementById('card');
+    card.style.display="block";
+
+  }
+  
+  function crowdCheer() {
+    let audio2 = document.getElementById("audio-2");
+    audio2.play();
+  }
+
+
 
