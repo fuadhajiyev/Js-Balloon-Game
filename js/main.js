@@ -70,9 +70,8 @@ function Game(){
 
     for(let i = 0; i < this.balloonsArray.length; i++)
     {
-      this.balloonsArray[i].element.style.bottom = (parseInt(this.balloonsArray[i].element.style.bottom) + 4.3 + this.balloonsArray[i].getRandomSpeed())+'px';
+      this.balloonsArray[i].element.style.bottom = (parseInt(this.balloonsArray[i].element.style.bottom) + 5 + this.balloonsArray[i].getRandomSpeed())+'px';
     }
-
 
     if(this.balloonsArray.length === this.maxBalloonsNumber){
       
