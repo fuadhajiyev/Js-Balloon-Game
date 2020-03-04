@@ -15,7 +15,7 @@ function Game(){
     this.updateTime = null;
     this.densityStep = null;
     this.balloonsArray = null;
-    this.maxBalloonsNumber = 45;
+    this.maxBalloonsNumber = 56;
     let thiz = this;
 
     this.updater = function(){
@@ -55,10 +55,12 @@ function Game(){
         let thiz = this;
         let index = this.balloonsArray.length;
         tempBalloon.element.onclick = function(){
+
           thiz.score += thiz.balloonsArray[index].points;
+          playSound();
           thiz.updateScore(thiz.score);
           this.parentNode.removeChild(tempBalloon.element);
-          playSound();
+
         };
         this.canvasElement.appendChild(tempBalloon.element);
         this.balloonsArray[index] = tempBalloon;
@@ -68,7 +70,7 @@ function Game(){
 
     for(let i = 0; i < this.balloonsArray.length; i++)
     {
-      this.balloonsArray[i].element.style.bottom = (parseInt(this.balloonsArray[i].element.style.bottom) + 3.8 + this.balloonsArray[i].getRandomSpeed())+'px';
+      this.balloonsArray[i].element.style.bottom = (parseInt(this.balloonsArray[i].element.style.bottom) + 4.3 + this.balloonsArray[i].getRandomSpeed())+'px';
     }
 
 
@@ -99,7 +101,7 @@ function Game(){
     this.isPaused = true;
     this.score = 0;
     this.speed = 0.01;
-    this.density = 0.25;  
+    this.density = 0.15;  
     this.remainingLives = 5;
     this.updateTime = 50;
     this.densityStep = 1;
@@ -180,7 +182,8 @@ function Game(){
       restartGame.updateScore(0);
     }
   }
-  //winner game 
+
+  //winner game sound
   function winnerCard() { 
       crowdCheer();
     let card = document.getElementById('card');
@@ -193,5 +196,9 @@ function Game(){
     audio2.play();
   }
 
+
+ 
+
+  
 
 

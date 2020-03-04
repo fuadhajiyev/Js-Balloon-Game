@@ -1,0 +1,108 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.area{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.safari-warning {
+  display: none;
+  color: #ff6e00;
+}
+
+.safari .safari-warning {
+  display: block;
+}
+
+
+.svg-filters {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+/* .button--9 {
+  -webkit-font-smoothing: antialiased;
+  background-color: #222;
+  border: none;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 0.1em;
+
+  padding: 20px 40px;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.1s ease-out;
+  -moz-transition: background-color 0.1s ease-out;
+  transition: background-color 0.1s ease-out;
+} */
+
+
+.button--9:hover {
+  background-color: #2CD892;
+  color: #fff;
+}
+
+
+.button--9:focus {
+  outline: none;
+  color: #fff;
+}
+
+.safari .button,
+.safari .button__bg {
+  -webkit-filter: none !important;
+  filter: none !important;
+}
+
+
+
+.button--9 {
+  -webkit-transition: all 0.45s ease-out;
+  -moz-transition: all 0.45s ease-out;
+  transition: all 0.45s ease-out;
+  /* background-image: -webkit-radial-gradient(60% 20%, circle, #FF6023 0%, #DA305D);
+  background-image: radial-gradient(circle at 60% 20%, #FF6023 0%, #DA305D);
+  box-shadow: 0 0 0 20px rgb(172, 172, 22);
+  border-radius: 80px;
+  color: #FFF;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  padding: 0; */
+  position: absolute;
+  width: 40px;
+  height: 53px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: red;
+  z-index: 99;
+  -webkit-transition: all 0.45s ease-out;
+  -moz-transition: all 0.45s ease-out;
+  transition: all 0.45s ease-out;
+  filter: url('#filter-ripple-2');
+  
+}
+
+/* .button--9:focus {
+  color: #FFF;
+}
+
+.button--9:hover {
+  background-image: -webkit-radial-gradient(60% 20%, circle, #FF6023 0%, #DA305D);
+  background-image: radial-gradient(circle at 60% 20%, #FF6023 0%, #DA305D);
+  color: #FFF;
+} */
+
+
+
+/*# sourceMappingURL=main.css.map */

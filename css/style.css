@@ -9,11 +9,12 @@ body {
 }
 
 
+
 #main-wrapper {
     position: relative;
     margin: 0 auto;
     width: 500px;
-    height: 130vh;
+    height: 110vh;
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
@@ -22,7 +23,7 @@ body {
     top: 0;
     left: 0;
     width: 500px;
-    height: 130vh;
+    height: 110vh;
     /* background: #337bc7; */
     background: rgb(172, 172, 22);
     overflow: hidden;
@@ -68,13 +69,17 @@ body {
 }
 
 .balloon {
+    /* background-color: red; */
     position: absolute;
     width: 40px;
     height: 53px;
-    /* background-color: red; */
     border-radius: 50%;
     border: 1px solid black;
     z-index: 99;
+    -webkit-transition: all 0.45s ease-out;
+    -moz-transition: all 0.45s ease-out;
+    transition: all 0.45s ease-out;
+    
 }
 
 #card{
@@ -90,7 +95,7 @@ body {
 
 .winner-card{
 
-    width: 270px;
+    width: 300px;
     height: 250px;
     margin: 0 auto;
     border-radius: 20px;
