@@ -55,12 +55,10 @@ function Game(){
         let thiz = this;
         let index = this.balloonsArray.length;
         tempBalloon.element.onclick = function(){
-
-          thiz.score += thiz.balloonsArray[index].points;
-          playSound();
-          thiz.updateScore(thiz.score);
           this.parentNode.removeChild(tempBalloon.element);
-
+          playSound();
+          thiz.score += thiz.balloonsArray[index].points;
+          thiz.updateScore(thiz.score);
         };
         this.canvasElement.appendChild(tempBalloon.element);
         this.balloonsArray[index] = tempBalloon;
