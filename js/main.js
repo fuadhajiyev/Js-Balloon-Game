@@ -132,7 +132,7 @@ class Balloon {
   constructor(x, y, points) {
     this.positionX = x;
     this.positionY = y;
-    this.color = ["#d64161", "red", "blue", "orangered"];
+    this.color = ["#d64161", "red", "blue", "green"];
     this.points = points;
     this.element = this.createElement();
   }

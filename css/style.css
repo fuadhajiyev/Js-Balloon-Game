@@ -203,4 +203,8 @@ body {
 
 
     }
+
+    #info-ball{
+        width: max-content;
+    }
 }
