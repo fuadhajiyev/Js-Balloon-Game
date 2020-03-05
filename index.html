@@ -16,14 +16,22 @@
 
     <div id="main-wrapper">
         <div id="canvas">
-            <div id="card">
-                <h2 class="	congrats">&#128525; TƏBRİKLƏR &#129305; PİVƏ <br> qonaqlığı  qazandınız &#129321;</h2>
-                <div class="winner-card">
+            <div id="ball-panel"></div>
+            <div id="winner-card">
+                <h2 class="	congrats">&#128525; TƏBRİKLƏR &#129305; &#129321;</h2>
+                <div class="card winner">
                     <img src="img/friends.jpg" alt="author is Fuad" srcset="" title="congratulations!">
-                </div>
-           
+                </div>          
             </div>
+
+            <div id="game-over">
+                <div class="card lose">
+                    <img src="img/giphy.gif" alt="author is Fuad" srcset="" title="you lose!">
+                </div>
+            </div>
+
         </div>
+
         <div id="score-label">
             Score: <span id="score-count">0</span>
         </div>
@@ -37,6 +45,7 @@
         <audio id="audio" src="music/slap.mp3"></audio>
         <audio id="audio-2" src="music/crowd-cheer.wav"></audio>
         <audio id="audio-3" src="music/start.ogg"></audio>
+        <audio id="audio-4" src="music/gameOver.wav"></audio>
      
 			
 					<!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters" id="svg">
