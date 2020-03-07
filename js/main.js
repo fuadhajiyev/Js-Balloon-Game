@@ -108,6 +108,7 @@ Game.prototype.updateGame = function() {
 
     if (this.balloonsArray.length === counter) {
       clearInterval(this.intervalId);
+      this.ballPanelElement.innerHTML = null;
       showRestartButton();
     }
   }
