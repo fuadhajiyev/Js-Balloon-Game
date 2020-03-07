@@ -66,7 +66,7 @@ Game.prototype.updateGame = function() {
     this.balloonsArray.length < this.maxBalloonsNumber
   ) {
     for (let i = 0; i < parseInt(this.densityStep); i++) {
-      var tempBalloon = new Balloon(0, -53, 150);
+      var tempBalloon = new Balloon(0, 0, 150);
       let thiz = this;
       let index = this.balloonsArray.length;
       let colorCheck = tempBalloon.element.style.backgroundColor;
@@ -90,10 +90,7 @@ Game.prototype.updateGame = function() {
 
   for (let i = 0; i < this.balloonsArray.length; i++) {
     this.balloonsArray[i].element.style.bottom =
-      parseInt(this.balloonsArray[i].element.style.bottom) +
-      5 +
-      this.balloonsArray[i].getRandomSpeed() +
-      "px";
+      parseInt(this.balloonsArray[i].element.style.bottom) + 5 + this.balloonsArray[i].getRandomSpeed() + "px";
   }
 
   if (this.balloonsArray.length === this.maxBalloonsNumber) {
